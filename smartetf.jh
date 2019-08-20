@@ -1,0 +1,147 @@
+entity ParameterGlobal {
+	prmId String required unique minlength(20) maxlength(20),
+    prmName String required maxlength(50),
+    prmTy String required maxlength(1),
+    appType String,
+    intVal Integer,
+    floatVal Float,
+    strVal String,
+    dateVal LocalDate,
+    show Boolean,
+    edit Boolean
+}
+
+entity TipeEfek {
+	tipeEfek String required unique minlength(1) maxlength(1),
+    keterangan String maxlength(20)
+}
+
+entity Nasabah {
+	kodeNasabah String required unique maxlength(20),
+    namaNasabah String required maxlength(150),
+    tipeNasabah String required maxlength(1),
+    sid String maxlength(15),
+    bankSubRek String maxlength(14),
+    alamat1 String maxlength(60),
+    alamat2 String maxlength(60),
+    alamat3 String maxlength(60),
+    noTelp String maxlength(30),
+    noFax String maxlength(30),
+    statusSubRek String maxlength(1),
+    status String
+}
+
+entity Efek {
+	kodeEfek String required unique maxlength(20),
+    namaEfek String required maxlength(150),
+    tipeEfek String required,
+    lastClosingPrice Double min(0),
+    lastClosingDate LocalDate,
+    lastHairCut Double required min(0) max(100),
+    lastHairCutDate LocalDate,
+    statusGadai Boolean,
+    jlhEfekBeredar Long min(0),
+    bmpk Double min(0),
+    bondRating String maxlength(10),
+    bondMaturityDate LocalDate,
+    satuan Long min(1),
+    status String maxlength(1)
+}
+
+entity Broker
+{
+	kodeBroker String required unique maxlength(20),
+    namaBroker String required maxlength(150)
+}
+
+entity BankCustodi
+{
+	kodeCustodi String required unique maxlength(20),
+    namaCustodi String required maxlength(150)
+}
+
+entity IdxHoliday
+{
+	tanggal LocalDate required unique,
+    keterangan String required maxlength(150)
+
+}
+
+entity HargaPenutupan
+{
+	tanggal LocalDate required,
+    kodeEfek String required maxlength(20),
+    harga Double min(0)
+}
+
+entity HairCut
+{
+	tanggal LocalDate required,
+    kodeEfek String required maxlength(20),
+    nilaiHairCut Double required min(0) max(100)
+}
+
+entity PengajuanGadaiEfekHeader
+{
+	noPengajuanGadai String required unique maxlength(20),
+    tglEntri LocalDate,
+    tglEfekTerima LocalDate,
+    kodeNasabah String,
+    nilaiPinjaman Double min(0),
+    counterPartInstruksi String,
+    status String required maxlength(1)
+}
+
+entity PengajuanGadaiEfekDtl
+{
+	noPengajuanGadai String required,
+    kodeEfek String required,
+    quantity Long min(1)
+}
+
+entity TransaksiGadaiEfekHeader
+{
+	noKontrak String required unique maxlength(20),
+    tglEntri LocalDate required,
+    tglPencairan LocalDate,
+    tglJatuhTempo LocalDate,
+    noPengajuanGadai String,
+    kodeNasabah String,
+    nilaiKewajiban Double required min(0),
+    tglKirimEfek LocalDate,
+	counterPartInstruksi String
+    status String
+}
+
+entity EksekusiHeader
+{
+	noEksekusi String required unique maxlength(20),
+    tanggalEntri LocalDate,
+    tanggalTrade LocalDate,
+    tanggalSettle LocalDate,
+    kodeBroker String
+}
+
+entity EksekusiDtl
+{
+	noEksekusi String required maxlength(20),
+    nomorKontrak String required maxlength(20),
+    kodeEfek String required maxlength(20),
+    quantity Long min(0),
+    doneQty Long min(0),
+    doneAmount Double min(0)
+}
+
+entity EksekusiSummary
+{
+	noEksekusi String required maxlength(20),
+    kodeEfek String required maxlength(20),
+    hargaJual Double min(0),
+    quantity Long min(0),
+    doneQty Long min(0),
+    amount Double min(0),
+    biaya Double min(0),
+    netAmount Double min(0),
+    alokasiQty Long min(0),
+    aloksiAmount Double min(0)
+}
