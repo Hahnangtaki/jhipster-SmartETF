@@ -1,0 +1,58 @@
+{
+    "name": "PengajuanGadaiEfekHeader",
+    "fields": [
+        {
+            "fieldName": "noPengajuanGadai",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required",
+                "unique",
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": 20
+        },
+        {
+            "fieldName": "tglEntri",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "tglEfekTerima",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "kodeNasabah",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "nilaiPinjaman",
+            "fieldType": "Double",
+            "fieldValidateRules": [
+                "min"
+            ],
+            "fieldValidateRulesMin": 0
+        },
+        {
+            "fieldName": "counterPartInstruksi",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "status",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required",
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": 1
+        }
+    ],
+    "relationships": [],
+    "changelogDate": "20190820044603",
+    "entityTableName": "pengajuan_gadai_efek_header",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

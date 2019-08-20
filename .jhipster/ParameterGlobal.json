@@ -1,0 +1,73 @@
+{
+    "name": "ParameterGlobal",
+    "fields": [
+        {
+            "fieldName": "prmId",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required",
+                "unique",
+                "minlength",
+                "maxlength"
+            ],
+            "fieldValidateRulesMinlength": 20,
+            "fieldValidateRulesMaxlength": 20
+        },
+        {
+            "fieldName": "prmName",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required",
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": 50
+        },
+        {
+            "fieldName": "prmTy",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required",
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": 1
+        },
+        {
+            "fieldName": "appType",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "intVal",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "floatVal",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "strVal",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "dateVal",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "show",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "edit",
+            "fieldType": "Boolean"
+        }
+    ],
+    "relationships": [],
+    "changelogDate": "20190820044554",
+    "entityTableName": "parameter_global",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}
