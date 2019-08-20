@@ -1,0 +1,41 @@
+{
+    "name": "EksekusiHeader",
+    "fields": [
+        {
+            "fieldName": "noEksekusi",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required",
+                "unique",
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": 20
+        },
+        {
+            "fieldName": "tanggalEntri",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "tanggalTrade",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "tanggalSettle",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "kodeBroker",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [],
+    "changelogDate": "20190820044606",
+    "entityTableName": "eksekusi_header",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}
