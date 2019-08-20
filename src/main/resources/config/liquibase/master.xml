@@ -14,6 +14,21 @@
     <property name="uuidType" value="uuid" dbms="h2, postgresql"/>
 
     <include file="config/liquibase/changelog/00000000000000_initial_schema.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190820043722_added_entity_ParameterGlobal.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190820043723_added_entity_TipeEfek.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190820043724_added_entity_Nasabah.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190820043725_added_entity_Efek.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190820043726_added_entity_Broker.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190820043727_added_entity_BankCustodi.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190820043728_added_entity_IdxHoliday.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190820043729_added_entity_HargaPenutupan.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190820043730_added_entity_HairCut.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190820043731_added_entity_PengajuanGadaiEfekHeader.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190820043732_added_entity_PengajuanGadaiEfekDtl.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190820043733_added_entity_TransaksiGadaiEfekHeader.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190820043734_added_entity_EksekusiHeader.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190820043735_added_entity_EksekusiDtl.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190820043736_added_entity_EksekusiSummary.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-changelog - JHipster will add liquibase changelogs here -->
     <!-- jhipster-needle-liquibase-add-constraints-changelog - JHipster will add liquibase constraints changelogs here -->
 </databaseChangeLog>
