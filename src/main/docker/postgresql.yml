@@ -1,0 +1,11 @@
+version: '2'
+services:
+  smartetf-postgresql:
+    image: postgres:11.4
+    # volumes:
+    #     - ~/volumes/jhipster/SmartETF/postgresql/:/var/lib/postgresql/data/
+    environment:
+      - POSTGRES_USER=SmartETF
+      - POSTGRES_PASSWORD=
+    ports:
+      - 5432:5432

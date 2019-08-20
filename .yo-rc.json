@@ -1,0 +1,43 @@
+{
+  "generator-jhipster": {
+    "applicationType": "gateway",
+    "gitCompany": "",
+    "baseName": "SmartETF",
+    "packageName": "id.tech.cakra.smartetf",
+    "packageFolder": "id/tech/cakra/smartetf",
+    "serverPort": 8000,
+    "serviceDiscoveryType": "eureka",
+    "authenticationType": "jwt",
+    "uaaBaseName": "../uaa",
+    "cacheProvider": "no",
+    "enableHibernateCache": false,
+    "websocket": false,
+    "databaseType": "sql",
+    "devDatabaseType": "h2Disk",
+    "prodDatabaseType": "postgresql",
+    "searchEngine": false,
+    "enableSwaggerCodegen": false,
+    "messageBroker": false,
+    "buildTool": "gradle",
+    "useSass": true,
+    "clientPackageManager": "npm",
+    "testFrameworks": [],
+    "enableTranslation": false,
+    "nativeLanguage": "en",
+    "languages": [
+      "en"
+    ],
+    "clientFramework": "react",
+    "jhiPrefix": "jhi",
+    "jhipsterVersion": "6.2.0",
+    "jwtSecretKey": "YzVmY2Q3MzUyZDc0NzMwMDIyMTEwNjYwNTY1MTNkYjRmOTdhYmNlY2JkYTU5OTk3NDRjMTBmMTc0YzBlNDE3ODk3YjIzOTNkNDRmZWFjYjE2MTNmNGQ4NDZlZmJlZDVhMjU3Y2M2ODlmN2UyMjg1YTlmNDgyOThiNzcxMWVhMmI=",
+    "clientTheme": "none",
+    "entitySuffix": "",
+    "dtoSuffix": "DTO",
+    "otherModules": [],
+    "blueprints": []
+  },
+  "git-provider": "GitHub",
+  "git-company": "Hahnangtaki",
+  "repository-name": "jhipster-SmartETF"
+}
