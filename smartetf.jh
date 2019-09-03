@@ -1,0 +1,166 @@
+entity GlobalParameter {
+	prmId String required unique minlength(20) maxlength(20),
+    prmName String required maxlength(50),
+    prmType String required maxlength(1),
+    appType String,
+    intVal Integer,
+    floatVal Float,
+    strVal String,
+    dateVal LocalDate,
+    show Boolean,
+    edit Boolean
+}
+
+entity BankCustody
+{
+	custodyId Integer required unique,
+    custodyCode String required maxlength(10),
+    custodiName String maxlength(150)
+}
+
+entity Mi
+{
+	miId Integer required unique,
+    miCode String required maxlength(10),
+    miName String maxlength(100)
+}
+
+entity DealerParticipant {
+	dealerId Integer required unique,
+    dealerCode String required maxlength(10),
+    dealerName String maxlength(100)
+}
+
+entity EtfProduct {
+	productId String required unique,
+    productCode String required maxlength(10),
+    productName String  maxlength(50),
+    fundCategory String maxlength(10),
+    inceptionDate LocalDate,
+    clearingHouse String maxlength(10),
+    exchage String maxlength(10),
+    unitCreation Integer min(0),
+    unitPriceInitial Float,
+    unitPriceCurr Float,
+    lotPerBasket Float,
+    indexReff String maxlength(10),
+    rating Float,
+    fee Float,
+    miId Integer,
+    custodyId Integer
+}
+
+entity EtfProductDealer
+{
+	productId Integer required unique,
+    dealerId Integer required unique
+}
+
+entity EtfUnderlying
+{
+	underlyingId Integer required unique,
+    effectiveDate LocalDate,
+    productId Integer
+}
+
+entity EtfUnderlyingDtl
+{
+	underlyingId Integer required unique,
+    stockCode String maxlength(10),
+    weight Float
+}
+
+entity EtfHistory
+{
+	productId Integer required unique,
+    valueDate LocalDate,
+    unitPrice Float,
+    unitQty Float,
+    aum Float
+}
+
+entity Subscription
+{
+	subscriptionId Integer required unique,
+    subscriptionCode String maxlength(20),
+    subscriptionDate LocalDate,
+    customerId String maxlength(20),
+    customerName String maxlength(200),
+    unitBuyPriceInd Float,
+    unitBuyPrice Float,
+    unitBuyUnit Float,
+    unitBuyLot Float,
+    unitBuyBasket Float,
+    market String,
+    buyGrossAmount Float,
+    fee Float,
+    buyNetAmount Float,
+    statusCash String,
+    statusEtf String,
+    status String,
+    channel Integer,
+    dealerId Integer,
+    productId Integer,
+    underlyingId Integer
+}
+
+entity Redemption
+{
+	redemptionId Integer unique,
+    redemptionCode String maxlength(20),
+  	redemptionDate LocalDate,
+    customerId String maxlength(20),
+    customerName String maxlength(200),
+    unitSellPriceInd Float,
+    unitSellPrice Float,
+    unitSellUnit Float,
+    unitSellLot Float,
+    unitSellBasket Float,
+    market String,
+    sellGrossAmount Float,
+    fee Float,
+    sellNetAmount Float,
+    statusCash String,
+    statusEtf String
+    status String,
+    channel Integer,
+    dealerId Integer,
+    productId Integer,
+    underlyingId Integer
+}
+
+entity EtfExecution
+{
+	basketOrderId Integer unique,
+    stockCode String maxlength(10),
+    qty Float,
+    qtyOdd Float,
+    price Float,
+    amount Float
+}
+
+entity EtfExecutionDtl {
+	basketOrderId Integer unique,
+    transactionId Integer,
+    transactionType String
+}
+
+entity Portofolio {
+	customerId Integer,
+    productId Integer,
+    portofolioDate LocalDate,
+    unit Float,
+    avgPrice Float
+}
+
+
+// Set pagination options
+//paginate Nasabah with pagination
+
+dto * with mapstruct
+
+// Set service options to all except few
+service all with serviceImpl
+
+// Set an angular suffix
+angularSuffix * with mySuffix
